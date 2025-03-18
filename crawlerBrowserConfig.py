@@ -37,7 +37,7 @@ async def main():
         data = [{"url": result.url, "depth": result.metadata.get("depth", 0), "content": result.markdown}
                 for result in results]
 
-        with open("deep_crawl_results.json", "w", encoding="utf-8") as f:
+        with open("BrowserConfigData.json", "w", encoding="utf-8") as f:
             json.dump(data, f, indent=4, ensure_ascii=False)
 
         print("Crawled data has been saved to deep_crawl_results.json")
